@@ -15,7 +15,7 @@ Nginx still remains more flexible.
 Since the mainline release(currently 1.11.19) has all the latest 
 features, you'll need to install ii directly from the Nginx repositories. Thankfully, Nginx is kind enough to provide Red Hat Enterprise Linux (RHEL), CentOS, SUSE Linux Enterprise Server (SLES), Debian and Ubuntu repositories, as well as OS X and Windows binaries.
 
-![Screenshot](img.png)
+![Screenshot](img/img.png)
 
 ## Packages - RHEL/CentOS
 
@@ -24,7 +24,7 @@ by adding the following to
 
 _/etc/yum.repos.d/nginx.repo._
 
-![Screenshot](img_1.png)
+![Screenshot](img/img_1.png)
 
 You'll also need to replace os with either rhel or centos, and replace 
 osrelease with 5,6,or 7 for your correct release. YOu can check your 
@@ -39,7 +39,7 @@ _yum install nginx_
 
 First, download the Nginx signing key for the packages and install it:
 
-![Screenshot](img_2.png)
+![Screenshot](img/img_2.png)
 
 Or Use following command it there is any gpg warning
 
@@ -49,11 +49,11 @@ Then, using your preferred Linux editor, we can add the sources to
 
 _/etc/apt/sources.list.d/nginx.list_
 
-![Screenshot](img_3.png)
+![Screenshot](img/img_3.png)
 
 Replace codename with the release name with your os release name
 
-![Screenshot](img_4.png)
+![Screenshot](img/img_4.png)
 
 After adding the new source, we can then update the apt database and 
 install Nginx.
@@ -76,12 +76,12 @@ _sudo yum install yum-utils epel-release mock_
 Next, update /etc/yum.repos.d/nginx.repo and add the additional source 
 repository
 
-![Screenshot](img_5.png)
+![Screenshot](img/img_5.png)
 
 With the updated repository, we then create a directory for the build, 
 and download the Source RPM (SRPM)
 
-![Screenshot](img_6.png)
+![Screenshot](img/img_6.png)
 
 Next, download the required packages to complete the build
 
@@ -95,7 +95,7 @@ _rpm2cpio nginx-1.9.10-1.el7.ngx.src.rpm | cpio -idmv_
 
 You should see an output of the source files similar to this
 
-![img_8.png](img_8.png)
+![img_8.png](img/img_8.png)
 
 If we want to update the configuration and apply a patch or change one of the
 defaults, then this can simply be done by editing the files.
@@ -120,7 +120,7 @@ Depending on your processing power, this may take five minutes or more to
 complete. Once the build is complete, you should see the resultant binary RPM as
 well as a debug RPM in the /var/lib/mock/epel-7-x86_64 directory. Here's an example:
 
-![img_10.png](img_10.png)
+![img_10.png](img/img_10.png)
 
 Now that we have the new binary file, we can install it via yum:
 
@@ -131,17 +131,17 @@ running, you should be able to browse to it via the IP address and/or Fully
 Qualified Domain Name (FQDN) and see something very similar to what
 is shown here:
 
-![img_12.png](img_12.png)
+![img_12.png](img/img_12.png)
 
 Here's a quick reference table of available commands
 
-![img_13.png](img_13.png)
+![img_13.png](img/img_13.png)
 
 we can check the nginx configuration files by using
 
 _nginx -t_
 
-![img_15.png](img_15.png)
+![img_15.png](img/img_15.png)
 
 # Configuring Nginx
 
@@ -149,8 +149,8 @@ By default, Nginx will have two main configuration files. The first is
 /etc/nginx/nginx.conf which contains the main server configuration. The 
 second is /etc/nginx/default.conf. Default configuration looks something like
 
-![img_16.png](img_16.png)
-![img_17.png](img_17.png)
+![img_16.png](img/img_16.png)
+![img_17.png](img/img_17.png)
 
 The configuration files have two main components in them—simple
 directives and block directives. Simple directives are one-line items which
@@ -185,7 +185,7 @@ available. As of version 1.9.11 (released in February 2016), NGINX added
 dynamic modules, similar to the Dynamic Shared Objects (DSO) like the
 Apache HTTP server.
 
-![img_18.png](img_18.png)
+![img_18.png](img/img_18.png)
 
 Previous to this, you needed to recompile NGINX every time you updated a
 module, so this is a big step forward. Being statically compiled into the
@@ -193,7 +193,7 @@ main binary also meant that each instance of NGINX loaded all the
 modules internally, regardless of whether you needed them or not. This is
 why the mail modules were never compiled in with the standard binaries.
 
-![img_19.png](img_19.png)
+![img_19.png](img/img_19.png)
 
 However, even though 1.9.11 added the dynamic modules, none of the
 standard modules are dynamic by default. To make them into dynamic
@@ -214,7 +214,7 @@ If you have a static website, this is very easy to deploy with NGINX. To serve s
 files, we're going to edit the default site configuration 
 file /etc/nginx/conf.d/default.conf and make a few small changes.
 
-![img_20.png](img_20.png)
+![img_20.png](img/img_20.png)
 
 If the folder doesn't exist, create the /var/www/vhosts directory with the
 following command:
@@ -242,7 +242,7 @@ We can enable the basic NGINX stub_status page to give some rudimentary
 statistics and service status. To enable, edit your site config and add the
 following
 
-![img_21.png](img_21.png)
+![img_21.png](img/img_21.png)
 
 To prevent information leakage about your system, we have added the allow
 command. This should be your IP address. This is followed by the deny all
@@ -252,7 +252,7 @@ off access logs for this URL to save space
 After reloading your configuration (hint: systemctl reload nginx for systemdbased OS), you can now load the new URL /nginx_status in your browser.
 You should see something like the following:
 
-![img_22.png](img_22.png)
+![img_22.png](img/img_22.png)
 
 # Real-time statistics
 
@@ -297,7 +297,7 @@ _ngxtop -l /var/log/nginx/access.log_
 This will display a console-based view of what URLs are being accessed.
 Here's a basic example:
 
-![img_23.png](img_23.png)
+![img_23.png](img/img_23.png)
 
 We can filter only the 404 pages with the following:
 
