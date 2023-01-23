@@ -51,8 +51,8 @@ class LinkedList(object):
         counter = 1
 
         while (current.next):
-            if (counter == position):
-                new_element.next = current
+            if (counter + 1 == position):
+                new_element.next = current.next
                 current.next = new_element
             current = current.next
             counter += 1
