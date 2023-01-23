@@ -47,9 +47,15 @@ class LinkedList(object):
         Assume the first position is "1".
         Inserting at position 3 means between
         the 2nd and 3rd elements."""
-        current  = self.head
-        counter = 1
 
+        current  = self.head
+
+        if (position == 1):
+            new_element.next = current
+            self.head = new_element
+            return None
+
+        counter = 1
         while (current.next):
             if (counter + 1 == position):
                 new_element.next = current.next
@@ -57,10 +63,10 @@ class LinkedList(object):
             current = current.next
             counter += 1
 
-        if (counter == position):
-            new_element.next = current
-            current.value = new_element.value
-            current.next = new_element.next
+        # if (counter == position):
+        #     new_element.next = current
+        #     current.value = new_element.value
+        #     current.next = new_element.next
         return None
 
 
@@ -68,9 +74,14 @@ class LinkedList(object):
         """Delete the first node with a given value."""
         current = self.head
 
+        if (current.value == value):
+            self.head = current.next
+            return None
+
         while (current.next):
-            if (current.value == value):
-                current = current.next
+            if (current.next.value == value):
+                current.next = current.next.next
+            current = current.next
         pass
 
 # Test cases
@@ -95,10 +106,17 @@ print (ll.get_position(3).value)
 
 # Test insert
 
-ll.insert(e4,3)
+# ll.insert(e4,3)
+# # Should print 4 now
+# print ("# Should also print 4")
+# print (ll.get_position(3).value)
+
+print ("# Should also print 1")
+print (ll.get_position(1).value)
+ll.insert(e4,1)
 # Should print 4 now
-print ("# Should also print 4")
-print (ll.get_position(3).value)
+print ("# Should also print 1")
+print (ll.get_position(2).value)
 
 # Test delete
 ll.delete(1)
