@@ -3,10 +3,12 @@
 Only one root folder hierarchically in tree structure, in comparison windows have multiple root folder. Interaction with root folder is not good practices let the programs and applications do that.
 In Linux hidden files are called dotfiles because they start dot(.). 
 
-![Screenshot](screenshot.png)
+![Screenshot](img/screenshot.png)
 
 
 # #Directories
+
+![directories](img/img.png)
 
 ### #Home directory:
 Every user in linux will have its own space inside home directory except root user. Root user has its isolate space. Programs installed in a system are available for all user depending on permissions. Every user's data and configuration will be isolated.
