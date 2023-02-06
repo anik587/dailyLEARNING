@@ -62,11 +62,6 @@ class LinkedList(object):
                 current.next = new_element
             current = current.next
             counter += 1
-
-        # if (counter == position):
-        #     new_element.next = current
-        #     current.value = new_element.value
-        #     current.next = new_element.next
         return None
 
 
