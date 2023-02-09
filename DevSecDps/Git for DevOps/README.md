@@ -49,6 +49,10 @@
 ##### git pull -r
 ##### git rebase --continue
 ##### git rm -r --cache .idea
+##### git config --get remote.origin.url
+##### git remote show origin
+##### git remote -v
+
 
 
 
