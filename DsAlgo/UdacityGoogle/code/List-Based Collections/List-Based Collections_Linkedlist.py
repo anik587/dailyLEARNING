@@ -8,10 +8,12 @@ particular value.
 Then, use "Test Run" and "Submit" to run the test cases
 at the bottom."""
 
+
 class Element(object):
     def __init__(self, value):
         self.value = value
         self.next = None
+
 
 class LinkedList(object):
     def __init__(self, head=None):
@@ -33,12 +35,12 @@ class LinkedList(object):
         element = None
         current = self.head
         counter = 1
-        while (current.next and element == None):
-            if (counter == position):
+        while current.next and element is None:
+            if counter == position:
                 element = current
             current = current.next
             counter += 1
-        if (element == None and position == counter):
+        if element is None and position == counter:
             element = current
         return element
 
@@ -48,22 +50,21 @@ class LinkedList(object):
         Inserting at position 3 means between
         the 2nd and 3rd elements."""
 
-        current  = self.head
+        current = self.head
 
-        if (position == 1):
+        if position == 1:
             new_element.next = current
             self.head = new_element
             return None
 
         counter = 1
-        while (current.next):
-            if (counter + 1 == position):
+        while current.next:
+            if counter + 1 == position:
                 new_element.next = current.next
                 current.next = new_element
             current = current.next
             counter += 1
         return None
-
 
     def delete(self, value):
         """Delete the first node with a given value."""
@@ -79,6 +80,7 @@ class LinkedList(object):
             current = current.next
         pass
 
+
 # Test cases
 # Set up some Elements
 e1 = Element(1)
@@ -93,11 +95,11 @@ ll.append(e3)
 
 # Test get_position
 # Should print 3
-print ("# Should print 3")
-print (ll.head.next.next.value)
+print("# Should print 3")
+print(ll.head.next.next.value)
 # Should also print 3
-print ("# Should also print 3")
-print (ll.get_position(3).value)
+print("# Should also print 3")
+print(ll.get_position(3).value)
 
 # Test insert
 
@@ -106,22 +108,22 @@ print (ll.get_position(3).value)
 # print ("# Should also print 4")
 # print (ll.get_position(3).value)
 
-print ("# Should also print 1")
-print (ll.get_position(1).value)
-ll.insert(e4,1)
+print("# Should also print 1")
+print(ll.get_position(1).value)
+ll.insert(e4, 1)
 # Should print 4 now
-print ("# Should also print 1")
-print (ll.get_position(2).value)
+print("# Should also print 1")
+print(ll.get_position(2).value)
 
 # Test delete
 ll.delete(1)
 
 # Should print 2 now
-print ("# Should also print 2")
-print (ll.get_position(1).value)
+print("# Should also print 2")
+print(ll.get_position(1).value)
 # Should print 4 now
-print ("# Should also print 4")
-print (ll.get_position(2).value)
+print("# Should also print 4")
+print(ll.get_position(2).value)
 # Should print 3 now
-print ("# Should also print 3")
-print (ll.get_position(3).value)
+print("# Should also print 3")
+print(ll.get_position(3).value)
