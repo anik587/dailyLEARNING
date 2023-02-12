@@ -14,6 +14,7 @@ class Element(object):
         self.value = value
         self.next = None
 
+
 class LinkedList(object):
     def __init__(self, head) -> None:
         self.head = head
@@ -26,18 +27,18 @@ class LinkedList(object):
             current.next = new_element
         else:
             self.head = new_element
-    
+
     def findMidElement(self):
         length = 0
         current = self.head
         middle = self.head
-        while(current.next != None):
+        while current.next is not None:
             length += 1
-            if (length % 2 == 0):
+            if length % 2 == 0:
                 middle = middle.next
             current = current.next
-        
-        print('length : ', length+1)
+
+        print('length : ', length + 1)
         return middle.value
 
 

@@ -9,10 +9,12 @@
 # 3) If fast and slow meet then the linked list contains a cycle
 # 4) if fast points to null or fast.next points to null then linked list is not cyclic
 
+
 class Element(object):
     def __init__(self, value) -> None:
         self.value = value
         self.next = None
+
 
 class LinkedList(object):
     def __init__(self, head) -> None:
@@ -30,12 +32,13 @@ class LinkedList(object):
     def isCyclic(self):
         fast = self.head
         slow = self.head
-        while (fast != None and fast.next != None):
+        while fast is not None and fast.next is not None:
             fast = fast.next.next
             slow = slow.next
-            if (fast == slow):
-                return True    
+            if fast == slow:
+                return True
         return False
+
 
 e1 = Element(1)
 e2 = Element(2)
