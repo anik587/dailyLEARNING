@@ -34,13 +34,13 @@ class LinkedList(object):
             head = head.next
             current.next = previous
             previous = current
-            self.head = current
+            head = current
         pass
         current = head
         head = head.next
         current.next = previous
         previous = current
-        self.head = current
+        
 
     def printList(self):
         current = self.head
