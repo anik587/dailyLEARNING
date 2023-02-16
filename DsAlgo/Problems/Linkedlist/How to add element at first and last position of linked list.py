@@ -16,6 +16,17 @@ class LinkedList(object):
         self.head = new_element
         return
 
+    def add_element(self, new_element):
+        current = self.head
+        if self.head:
+            while current.next:
+                current = current.next
+            current.next = new_element
+        else:
+            self.head = new_element
+
+        return
+
     def add_element_tail(self, new_element):
         current = self.head
         while current.next:
@@ -41,11 +52,11 @@ e5 = Element(5)
 e6 = Element(6)
 
 ll = LinkedList(e1)
-ll.add_element_tail(e2)
-ll.add_element_tail(e3)
-ll.add_element_tail(e4)
-ll.add_element_tail(e5)
-ll.add_element_tail(e6)
+ll.add_element(e2)
+ll.add_element(e3)
+ll.add_element(e4)
+ll.add_element(e5)
+ll.add_element(e6)
 
 print(ll.get_head().value)
 print(ll.get_tail().value)

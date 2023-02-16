@@ -1,4 +1,4 @@
-# Java program to find middle element of linked list in one pass.
+# A program to find middle element of linked list in one pass.
 # In order to find middle element of a linked list
 # we need to find the length first but since we can only
 # traverse linked list one time, we will have to use two pointers
