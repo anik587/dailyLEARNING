@@ -40,14 +40,13 @@ class LinkedList(object):
         head = head.next
         current.next = previous
         previous = current
-        
 
     def printList(self):
         current = self.head
         while current.next is not None:
-            print(current.value, end = " ")
+            print(current.value, end=" ")
             current = current.next
-        print(current.value, end = " ")
+        print(current.value, end=" ")
 
 
 e1 = Element(5)
