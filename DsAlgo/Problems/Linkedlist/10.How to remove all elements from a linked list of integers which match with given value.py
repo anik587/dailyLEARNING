@@ -41,11 +41,11 @@ class LinkedList(object):
             current = current.next
         if current.value != val:
             newList.append(Element(current.value))
-        self.newList = newList
+        self.head = newList
         pass
 
     def printList(self):
-        current = self.newList.head
+        current = self.head
         while current.next:
             print(current.value, end=" ")
             current = current.next
