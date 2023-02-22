@@ -21,8 +21,8 @@ class LinkedList(object):
             self.head = new_element
 
         return
-    
-    def insertnthvalue(self, new_element, position):
+
+    def insert_nth_value(self, new_element, position):
         current = self.head
 
         if position == 1:
@@ -38,8 +38,8 @@ class LinkedList(object):
             current = current.next
             counter += 1
         return None
-    
-    def removenthvalue(self, position):
+
+    def remove_nth_value(self, position):
         current = self.head
 
         if position == 1:
@@ -53,7 +53,6 @@ class LinkedList(object):
             current = current.next
             counter += 1
         return None
-
 
 
 e1 = Element(1)
@@ -71,5 +70,5 @@ ll.add_element(e4)
 ll.add_element(e5)
 ll.add_element(e6)
 
-print(ll.insertnthvalue(e7, 5))
-print(ll.removenthvalue(4))
+print(ll.insert_nth_value(e7, 5))
+print(ll.remove_nth_value(4))
