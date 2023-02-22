@@ -1,4 +1,7 @@
 # How to remove all elements from a linked list of integers which match with given value
+# case 1 : 1, 2, 2, 2, 5, 2, 7, 2
+# case 2 : 2, 2, 2, 1, 2, 5
+# case 3 : 1, 2, 2, 2, 2
 
 class Element(object):
     def __init__(self, value):
