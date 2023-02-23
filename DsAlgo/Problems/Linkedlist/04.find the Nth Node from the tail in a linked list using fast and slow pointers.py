@@ -1,14 +1,5 @@
 # How to find the Nth Node from the tail in a linked list using fast and slow pointers
-# Two pointers, fast and slow are used while iterating over the linked list. 
-# The fast pointer moves two nodes in each iteration, while the slow pointer moves to one node. 
-# If the linked list contains a loop or cycle then both fast and slow pointers will meet at some point during iteration. 
-# If they don't meet and fast or slow will point to null, then the linked list is not cyclic and it doesn't contain any loop. 
-# Here is the exact algorithm
 
-# 1) Use two pointers fast and slow
-# 2) Move fast two nodes and slow one node in each iteration
-# 3) If fast and slow meet then the linked list contains a cycle
-# 4) if fast points to null or fast.next points to null then linked list is not cyclic
 
 
 class Element(object):
