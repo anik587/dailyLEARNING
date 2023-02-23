@@ -21,21 +21,44 @@ class LinkedList(object):
         else:
             self.head = new_value
     
-    def isPalindrome(self, element = None):
-        if element:
-            current = element
-        else:  
-            current = self.head
-        rev_current = self.head
-        check = True
-        while current.next:
-            if check:
-                self.isPalindrome(current.next)
-        if rev_current.value != current.value:
-            check = False
-        rev_current = rev_current.next
-        return current.value
-
+    def isPalindrome(self):
+        if not self.head or not self.head.next:
+            return True
+        
+        # Find the middle element using slow and fast pointers
+        slow = fast = self.head
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+        
+        # Reverse the second half of the linked list
+        prev = None
+        curr = slow
+        while curr:
+            curr.next= prev 
+            prev = curr
+            curr = curr.next
+        
+        # Traverse both halves of the linked list in parallel, comparing each element
+        p1 = self.head
+        p2 = prev
+        while p2:
+            if p1.val != p2.val:
+                # If the values of the elements don't match, it's not a palindrome
+                return False
+            p1 = p1.next,
+            p2 = p2.next
+        
+        # Restore the second half of the linked list to its original order
+        curr = prev
+        prev = None
+        while curr:
+            curr.next = prev
+            prev = curr
+            curr =  curr.next
+        
+        # If all elements were compared successfully, it's a palindrome
+        return True
 
 e1 = Element(1)
 e2 = Element(3)
@@ -53,4 +76,4 @@ ll.append(e5)
 ll.append(e6)
 ll.append(e7)
 
-ll.isPalindrome()
+print(ll.isPalindrome())

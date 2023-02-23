@@ -41,6 +41,15 @@ class LinkedList(object):
         current.next = previous
         previous = current
 
+    def reverseList(self, current):
+        while current.next:
+            current.next = self.reverseList(current.next)
+        if self.rev_list == None:
+            self.rev_list = LinkedList(Element(current.value))
+        else:
+            self.rev_list.append(Element(current.value))
+        return None
+
     def printList(self):
         current = self.head
         while current.next is not None:
