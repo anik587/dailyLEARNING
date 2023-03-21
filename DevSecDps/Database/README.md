@@ -253,5 +253,67 @@ Index is a pointer to data in a table.
 An index is same to index in the back of the book.
 Index is also unique constrain.
 
+#### Normalization
 
+Normalization is a profess of restructuring the data in data.
+THere is no redundancy of data, all data stored in one place.
+It eliminates characteristics like insertion, update and deletion anomalies.
+It converts large table in small tables and link them by relation.
+The purpose of normalization is sql is to eliminate redundant data and ensure data is stored logically.
+The Theory of Data Normalization in MySQL server is still being developed further. 
+For example, there are discussions even on 6th Normal Form. 
+However, in most practical applications, normalization achieves its best in 3rd Normal Form. 
+The evolution of Normalization in SQL theories is illustrated below
+
+![d.png](img/d.png)
+
+##### 1NF (First Normal Form) Rules
+
+![e1.png](img/e1.png)
+
+Each table cell should contain a single value.
+Each record needs to be unique.
+
+![e2.png](img/e2.png)
+
+##### 2NF (Second Normal Form) Rules
+
+Rule 1- Be in 1NF
+Rule 2- Single Column Primary Key that does not functionally dependant on any subset of candidate key relation
+
+![f.png](img/f.png)
+
+##### 3NF (Third Normal Form) Rules
+
+Rule 1- Be in 2NF
+Rule 2- Has no transitive functional dependencies
+
+![e1.png](img/g.png)
+
+#### De-normalization
+
+It is inverse profess of Normalization.
+When converted all small table want to make single table then we have to use de-normalization.
+De-normalization is a technique used by database to optimize the efficiency of database.
+This method allows to add mixed data into normal data.
+There are three types of de-normalization:
+
+Join rows from different tables, so you don't have to use queries with JOIN.
+
+Perform aggregate calculations like SUM() or COUNT() or MAX() or others, so you don't have to use queries with GROUP BY.
+
+Pre-calculate expensive calculations, so you don't have to use queries with complex expressions in the select-list.
+
+##### Pros of De-normalization:
+
+Retrieving data is faster since we do fewer joins
+Queries to retrieve can be simpler(and therefore less likely to have bugs), 
+since we need to look at fewer tables.
+
+#####  Cons of De-normalization:
+
+Updates and inserts are more expensive.
+De-normalization can make update and insert code harder to write.
+Data may be inconsistent.
+Data redundancy necessitates more storage.
 
