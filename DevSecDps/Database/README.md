@@ -244,6 +244,36 @@ A composite key is sql can be defined as a combination of multiple column, and t
 that are involved uniquely.
 Even though single column can't identify any row uniquely, a combination of over one column can uniquely identify any record.
 
+#### Cursor
+
+Cursor is a temporary work station.
+It created in system memory when sql statement is executed.
+A sql cursor is a set of rows together with points that identify rows.
+
+**Implicit cursor**
+
+An implicit cursor has attributes that return information about the most recently run SELECT or DML statement 
+that is not associated with a named cursor. 
+Note: You can use cursor attributes only in procedural statements, not in SQL statements.
+
+![h.png](img/h.png)
+
+
+**Explicit cursor**
+
+An explicit cursor is a named pointer to a private SQL area that stores information for processing 
+a specific query or DML statement—typically, one that returns or affects multiple rows. 
+You can use an explicit cursor to retrieve the rows of a result set one at a time.
+
+![i.png](img/i.png)
+
+#### Entities
+
+An entities can be real world object.
+An entity can be a single thing, person, place or object.
+Data can be stored about such entities.
+
+
 #### Index
 
 SQL index is a table used to speed up the searching of the data.
@@ -267,7 +297,7 @@ The evolution of Normalization in SQL theories is illustrated below
 
 ![d.png](img/d.png)
 
-##### 1NF (First Normal Form) Rules
+**1NF (First Normal Form) Rules**
 
 ![e1.png](img/e1.png)
 
@@ -276,14 +306,14 @@ Each record needs to be unique.
 
 ![e2.png](img/e2.png)
 
-##### 2NF (Second Normal Form) Rules
+**2NF (Second Normal Form) Rules**
 
 Rule 1- Be in 1NF
 Rule 2- Single Column Primary Key that does not functionally dependant on any subset of candidate key relation
 
 ![f.png](img/f.png)
 
-##### 3NF (Third Normal Form) Rules
+**3NF (Third Normal Form) Rules**
 
 Rule 1- Be in 2NF
 Rule 2- Has no transitive functional dependencies
