@@ -202,3 +202,56 @@ Search Databases stores data into complex data format which gives realtime actio
 ![18.png](img/18.png)
 ![19.png](img/19.png)
 ![20.png](img/20.png)
+
+
+## Database concepts
+
+#### RDBMS
+
+RDBMS stands for Relational Database Management System.
+RDBMS is collection of programs & compatibilities that enables IT Teams.
+RDBMS store data in the form of tables.
+We cannot use duplicate value for primary key.
+Maximum length of primary key 900 bytes.
+
+#### Database Table
+
+A table is a collection of related data entries and consist of column & rows.
+A row is each individual entry that exist in a table.
+A column holds specific information about every record in a table.
+Columns can be arranged in vertical and rows can be arranged as horizontal.
+THe column in table also called fields and rows called records.
+
+#### Foreign key
+
+A foreign key is a key used to link two tables together.
+It is also called referencing key.
+A foreign key is combination of column whose value match primary key attributes.
+Hence, it used for creating & maintaining the relationship between the two relations.
+
+#### Primary key
+
+A primary key is a minimal set of attributes in a table that uniquely identify rows in that table i.e. tuples.
+When multiple column used as primary key its known as composite primary key.
+When using the composite key you should use as minimum key as possible.
+The more column you use for primary key the more space you required.
+Primary key has unique data.
+Primary key cannot have null value.
+
+#### Composite key
+
+A composite key is sql can be defined as a combination of multiple column, and these columns are used to identify all the row
+that are involved uniquely.
+Even though single column can't identify any row uniquely, a combination of over one column can uniquely identify any record.
+
+#### Index
+
+SQL index is a table used to speed up the searching of the data.
+It also recover large amount of data from tables.
+Index requires its own space in storage.
+Index is a pointer to data in a table.
+An index is same to index in the back of the book.
+Index is also unique constrain.
+
+
+
