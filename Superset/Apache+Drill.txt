@@ -1,0 +1,41 @@
+Apache Drill Steps
+
+Step 1) Create a drill directory
+
+mkdir /home/dataengineer/drill
+
+Step 2) move to drill directory
+
+cd /home/dataengineer/drill
+
+Step 3) Download Apache Drill
+
+wget https://dlcdn.apache.org/drill/drill-1.19.0/apache-drill-1.19.0.tar.gz 
+
+(Please done this link might change always refer https://drill.apache.org/ for download and install)
+
+Step 4) Once Download is completed, unzip the tar by using command
+
+tar -xvzf apache-drill-1.19.0.tar.gz
+
+Step 5) cd apache-drill-1.19.0
+
+Step 6) Execute command
+
+bin/drill-embedded
+ 
+Apache Superset Steps
+
+Step 1 ) . venv/bin/activate <- Execute this command
+
+Step 2) pip install sqlalchemy-drill
+
+Step 3) Start Apache Superset
+
+superset run -p 8088 --with-threads --reload --debugger
+
+Database Url->  drill+sadrill://localhost:8047/dfs?use_ssl=False
+
+SELECT * FROM cp.`employee.json` LIMIT 3;
+
+SELECT * FROM dfs.`/home/dataengineer/drill/apache-drill-1.19.0/sample-data/region.parquet`;

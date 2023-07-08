@@ -1,0 +1,20 @@
+Apache Hive
+
+bin/beeline -n dataengineer -u jdbc:hive2://localhost:10000
+
+show databases;
+
+select * from athlete_events_final
+
+select * from noc_regions;
+
+**************************************************************************************
+
+Apache Superset
+
+pip install PyHive
+
+pip install 'pyhive[hive]'
+
+hive://dataengineer@localhost:10000/default
+
