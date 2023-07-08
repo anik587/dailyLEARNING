@@ -11,6 +11,7 @@ Microservices talk to one another over a combination of remote procedure calls (
 gRPC provides faster response but blast redius is huge.
 Event streaming provides better isolation betheen services but they take longer to process.
 ![Alt text](image.png)
-Well-architectured microservices practice stong information hiding so they broke up monolithic database into its logical components and keeping a logioa componen well hidden inside its corresponding microservices.
+Well-architectured microservices practice stong information hiding so they broke up monolithic database into its logical components and keeping a logioa componen well hidden inside its corresponding microservices, but database can nolonger maintain foreign keys so reponsibility of data integirity moved into application layer.
 ![Alt text](image.png)
-
+Api Gateway will handle authentication and authorization services through Identity Provider Service. To locate service route it consults a service registry and discover service. There are other facilities like Monitoring, deployment and troubleshooting etc. 
+![Alt text](image.png)
