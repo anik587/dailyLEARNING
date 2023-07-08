@@ -15,3 +15,4 @@ Well-architectured microservices practice stong information hiding so they broke
 ![Alt text](image.png)
 Api Gateway will handle authentication and authorization services through Identity Provider Service. To locate service route it consults a service registry and discover service. There are other facilities like Monitoring, deployment and troubleshooting etc. 
 ![Alt text](image.png)
+Microservices are not suitable for small companies, they hould build well-defined interface so that one day when application gets large then it be needing to split up.
