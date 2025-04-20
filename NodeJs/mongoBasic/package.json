@@ -1,0 +1,15 @@
+{
+  "name": "node-mongodb-basic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "mongodb.js",
+  "scripts": {
+   "start" : "node mongodb.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mongodb": "^3.3.2"
+  }
+}
