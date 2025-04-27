@@ -1,0 +1,58 @@
+npx sequelize-cli init
+  519  npm sequelize-cli -g
+  520  npm install sequelize-cli -g
+  521  npm install sequelize-cli --save
+  522  npx sequelize-cli init
+  523  npx sequelize-cli init
+  524  sequelize
+  525  sequelize migration:generate --name=create-user
+  526  sequelize migration:generate --name=create-user --migrations-source-path
+  527  sequelize migration:generate --name create-user
+  528  npx sequelize-cli migration:generate --name create-user
+  529  npx sequelize-cli seed:generate --name create-admin
+  530  npx sequelize-cli migration:generate --name create-channel
+  531  npx sequelize-cli migration:generate --name create-package
+  532  npx sequelize-cli migration:generate --name create-channelpackage
+  533  sequelize-cli db:migrate
+  534  npx sequelize-cli db:migrate
+  535  sequelize db:create
+  536  npx sequelize-cli db:create
+  537  npx sequelize-cli db:migrate
+  538  npx sequelize-cli db:migrate
+  539  npx sequelize-cli db:undo
+  540  npx sequelize-cli db:migration:undo
+  541  npx sequelize-cli db:migrate:undo
+  542  npx sequelize-cli db:migrate:undo
+  543  npx sequelize-cli db:migrate:undo:all
+  544  npx sequelize-cli migration:generate --name create-constrains
+  545  npx sequelize-cli db:migrate
+  546  npx sequelize-cli db:migrate:undo:all
+  547  npx sequelize-cli db:migrate
+  548  npx sequelize-cli db:migrate
+  549  npx sequelize-cli db:migrate:undo:all
+  550  npx sequelize-cli db:migrate
+  551  npx sequelize-cli db:migrate:undo:all
+  552  npx sequelize-cli db:migrate
+  553  npx sequelize-cli db:migrate:undo:all
+  554  npx sequelize-cli db:migrate
+  555  npx sequelize-cli db:seed
+  556  npx sequelize-cli db:se
+  557  npx sequelize-cli db:seed:all
+  558  sequelize db:seed:all
+  559  npx sequelize-cli db:seed
+  560  npx sequelize-cli db:seed:all
+  561  npx sequelize-cli seed:generate --name demo-user
+  562  npx sequelize-cli db:seed:all
+  563  npx sequelize-cli db:seed:all
+  564  cd d:
+  565  cd workSPACE/
+  566  ls
+  567  cd slm-v2/
+  568  ls
+  569  git status
+  570  git add .
+  571  git commit -m 'seeder migration aded'
+  572  git pll
+  573  git pull
+  574  git push
+  575  history
